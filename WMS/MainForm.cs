@@ -202,5 +202,12 @@ namespace WMS
         {
             lblDateTime.Text = DateTime.Now.ToString("yyyy/MM/dd\r\nHH:mm:ss");
         }
+
+        private void mnstrSetting_Click(object sender, EventArgs e)
+        {
+            Form_Setting settingForm = new Form_Setting();
+            settingForm.StartPosition = FormStartPosition.CenterParent;
+            settingForm.ShowDialog();
+        }
     }
 }

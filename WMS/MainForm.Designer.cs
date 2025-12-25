@@ -204,25 +204,26 @@
             this.toolStripSeparator1,
             this.mnstrExit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(112, 54);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 76);
             // 
             // mnstrSetting
             // 
             this.mnstrSetting.Image = ((System.Drawing.Image)(resources.GetObject("mnstrSetting.Image")));
             this.mnstrSetting.Name = "mnstrSetting";
-            this.mnstrSetting.Size = new System.Drawing.Size(111, 22);
+            this.mnstrSetting.Size = new System.Drawing.Size(180, 22);
             this.mnstrSetting.Text = "Setting";
+            this.mnstrSetting.Click += new System.EventHandler(this.mnstrSetting_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(108, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // mnstrExit
             // 
             this.mnstrExit.Image = ((System.Drawing.Image)(resources.GetObject("mnstrExit.Image")));
             this.mnstrExit.Name = "mnstrExit";
-            this.mnstrExit.Size = new System.Drawing.Size(111, 22);
+            this.mnstrExit.Size = new System.Drawing.Size(180, 22);
             this.mnstrExit.Text = "Exit";
             this.mnstrExit.Click += new System.EventHandler(this.mnstrExit_Click);
             // 

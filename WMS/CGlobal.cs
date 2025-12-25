@@ -11,6 +11,8 @@ namespace WMS
         public static string Version = "1.0.0.0";
         public static SMachineInfor[] MachineInfor = new SMachineInfor[20];
         public static SQLiteDatabase DataBase = new SQLiteDatabase(@"T:\TPM-Phu\01.Database\wms.db");
+
+        public static bool SimulationMode = false;
     }
 
     public struct SMachineInfor
