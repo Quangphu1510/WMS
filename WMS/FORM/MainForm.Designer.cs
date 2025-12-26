@@ -204,13 +204,13 @@
             this.toolStripSeparator1,
             this.mnstrExit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(112, 54);
             // 
             // mnstrSetting
             // 
             this.mnstrSetting.Image = ((System.Drawing.Image)(resources.GetObject("mnstrSetting.Image")));
             this.mnstrSetting.Name = "mnstrSetting";
-            this.mnstrSetting.Size = new System.Drawing.Size(180, 22);
+            this.mnstrSetting.Size = new System.Drawing.Size(111, 22);
             this.mnstrSetting.Text = "Setting";
             this.mnstrSetting.Click += new System.EventHandler(this.mnstrSetting_Click);
             // 
@@ -236,7 +236,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(1033, 54);
             this.lblTitle.TabIndex = 5;
-            this.lblTitle.Text = "WAAF Management System";
+            this.lblTitle.Text = "AMR Request System";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDateTime

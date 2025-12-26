@@ -87,6 +87,21 @@ namespace WMS
         }
         private void ScanData()
         {
+            /*
+            var fleetClient = new FleetApiClient(
+                                    baseUrl: "http://192.168.1.50",
+                                    token: "YOUR_API_TOKEN"
+                                    );
+            var task = new CreateTaskRequest
+            {
+                Mission = "DeliverMaterial",
+                Source = "WH_A",
+                Destination = "CNC_05",
+                Priority = 1,
+                Payload = "Pallet_01"
+            };
+            var result = await fleetClient.CreateTaskAsync(task);
+            */
             for (int i = 0; i < 20; i++)
             {
                 CGlobal.MachineInfor[i].MaterialInfor = new SMaterialInfor[2, 2];

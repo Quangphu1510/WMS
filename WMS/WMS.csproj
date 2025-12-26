@@ -38,11 +38,16 @@
     <ApplicationIcon>TPM1-removebg-preview.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net46\System.Data.SQLite.dll</HintPath>
     </Reference>
+    <Reference Include="System.Memory, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Text.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,23 +61,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CGlobal.cs" />
-    <Compile Include="Form_MachineInfor.cs">
+    <Compile Include="FORM\Form_MachineInfor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_MachineInfor.Designer.cs">
+    <Compile Include="FORM\Form_MachineInfor.Designer.cs">
       <DependentUpon>Form_MachineInfor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Setting.cs">
+    <Compile Include="FORM\Form_Setting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Setting.Designer.cs">
+    <Compile Include="FORM\Form_Setting.Designer.cs">
       <DependentUpon>Form_Setting.cs</DependentUpon>
     </Compile>
+    <Compile Include="RestAPI.cs" />
     <Compile Include="SQLite.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="FORM\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="FORM\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -80,13 +86,13 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form_MachineInfor.resx">
+    <EmbeddedResource Include="FORM\Form_MachineInfor.resx">
       <DependentUpon>Form_MachineInfor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Setting.resx">
+    <EmbeddedResource Include="FORM\Form_Setting.resx">
       <DependentUpon>Form_Setting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="FORM\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
