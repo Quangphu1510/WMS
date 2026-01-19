@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.chbSimulation = new System.Windows.Forms.CheckBox();
+            this.btnDisableAll = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // chbSimulation
             // 
             this.chbSimulation.AutoSize = true;
-            this.chbSimulation.Location = new System.Drawing.Point(27, 27);
+            this.chbSimulation.Location = new System.Drawing.Point(13, 18);
             this.chbSimulation.Name = "chbSimulation";
             this.chbSimulation.Size = new System.Drawing.Size(74, 17);
             this.chbSimulation.TabIndex = 0;
@@ -42,11 +43,22 @@
             this.chbSimulation.UseVisualStyleBackColor = true;
             this.chbSimulation.CheckedChanged += new System.EventHandler(this.chbSimulation_CheckedChanged);
             // 
+            // btnDisableAll
+            // 
+            this.btnDisableAll.Location = new System.Drawing.Point(12, 41);
+            this.btnDisableAll.Name = "btnDisableAll";
+            this.btnDisableAll.Size = new System.Drawing.Size(75, 23);
+            this.btnDisableAll.TabIndex = 1;
+            this.btnDisableAll.Text = "Disable All";
+            this.btnDisableAll.UseVisualStyleBackColor = true;
+            this.btnDisableAll.Click += new System.EventHandler(this.btnDisableAll_Click);
+            // 
             // Form_Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(142, 64);
+            this.ClientSize = new System.Drawing.Size(127, 81);
+            this.Controls.Add(this.btnDisableAll);
             this.Controls.Add(this.chbSimulation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Setting";
@@ -62,5 +74,6 @@
         #endregion
 
         private System.Windows.Forms.CheckBox chbSimulation;
+        private System.Windows.Forms.Button btnDisableAll;
     }
 }

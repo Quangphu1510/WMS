@@ -28,6 +28,7 @@ namespace WMS
         {
             if (CGlobal.MachineInfor[_ID].MaterialInfor == null) return;
 
+            //Enable Check
             if (CGlobal.SimulationMode)
             {
                 TestRandom(); 
@@ -61,16 +62,30 @@ namespace WMS
                 lblMachineName.BackColor = Color.FromArgb(36, 180, 99);
             }
 
+            //Material Status
             progressBar_FailACT.Value = CGlobal.MachineInfor[_ID].MaterialInfor[(int)eStage.ACT, (int)eTray.Fail].Remain * 100 / CGlobal.MachineInfor[_ID].MaterialInfor[(int)eStage.ACT, (int)eTray.Fail].Total;
             progressBar_InputACT.Value = CGlobal.MachineInfor[_ID].MaterialInfor[(int)eStage.ACT, (int)eTray.Input].Remain * 100 / CGlobal.MachineInfor[_ID].MaterialInfor[(int)eStage.ACT, (int)eTray.Input].Total;
             progressBar_FailSS.Value = CGlobal.MachineInfor[_ID].MaterialInfor[(int)eStage.Sensor, (int)eTray.Fail].Remain * 100 / CGlobal.MachineInfor[_ID].MaterialInfor[(int)eStage.Sensor, (int)eTray.Fail].Total;
             progressBar_InputSS.Value = CGlobal.MachineInfor[_ID].MaterialInfor[(int)eStage.Sensor, (int)eTray.Input].Remain * 100 / CGlobal.MachineInfor[_ID].MaterialInfor[(int)eStage.Sensor, (int)eTray.Input].Total;
 
-            string[] temp = { "None", "Request", "Recieve", "Error" };
+            //AMR Request Status
+            string[] temp = { "None", "Requesting", "Tranmission", "Error" };
             Color[] colors = { Color.LightGray, Color.Yellow, Color.LimeGreen, Color.Red };
+
+            if (CGlobal.MachineInfor[_ID].MaterialInfor[(int)eStage.ACT, (int)eTray.Fail].Request
+                || CGlobal.MachineInfor[_ID].MaterialInfor[(int)eStage.ACT, (int)eTray.Input].Request
+                || CGlobal.MachineInfor[_ID].MaterialInfor[(int)eStage.Sensor, (int)eTray.Fail].Request
+                || CGlobal.MachineInfor[_ID].MaterialInfor[(int)eStage.Sensor, (int)eTray.Input].Request)
+            {
+                CGlobal.MachineInfor[_ID].AMRRequest = eAMR_RQ.Request;
+            }
+            else
+            { CGlobal.MachineInfor[_ID].AMRRequest = eAMR_RQ.None; }
+
             lblAMRRequest.Text = temp[(int)CGlobal.MachineInfor[_ID].AMRRequest];
             lblAMRRequest.BackColor = colors[(int)CGlobal.MachineInfor[_ID].AMRRequest];
 
+            //Production Rate
             lblInput.Text = "Input: " + CGlobal.MachineInfor[_ID].ProdRate.Input.ToString("N0");
             lblPass.Text = "Pass: " + CGlobal.MachineInfor[_ID].ProdRate.Pass.ToString("N0");
             lblFail.Text = "Fail: " + CGlobal.MachineInfor[_ID].ProdRate.Fail.ToString("N0");

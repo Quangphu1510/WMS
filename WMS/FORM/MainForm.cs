@@ -157,6 +157,24 @@ namespace WMS
                                 CGlobal.MachineInfor[i].MaterialInfor[(int)eStage.Sensor, (int)eTray.Input].Total = temp;
                             }
 
+                            //Request
+                            if (int.TryParse(tableMain.Rows[i]["FailACT_REQ"].ToString(), out temp))
+                            {
+                                CGlobal.MachineInfor[i].MaterialInfor[(int)eStage.ACT, (int)eTray.Fail].Request = temp == 1 ? true : false;
+                            }
+                            if (int.TryParse(tableMain.Rows[i]["FailSensor_REQ"].ToString(), out temp))
+                            {
+                                CGlobal.MachineInfor[i].MaterialInfor[(int)eStage.Sensor, (int)eTray.Fail].Request = temp == 1 ? true : false;
+                            }
+                            if (int.TryParse(tableMain.Rows[i]["InputACT_REQ"].ToString(), out temp))
+                            {
+                                CGlobal.MachineInfor[i].MaterialInfor[(int)eStage.ACT, (int)eTray.Input].Request = temp == 1 ? true : false;
+                            }
+                            if (int.TryParse(tableMain.Rows[i]["InputSensor_REQ"].ToString(), out temp))
+                            {
+                                CGlobal.MachineInfor[i].MaterialInfor[(int)eStage.Sensor, (int)eTray.Input].Request = temp == 1 ? true : false;
+                            }
+
                             //ProdRate
                             if (int.TryParse(tableMain.Rows[i]["Input"].ToString(), out temp))
                             {

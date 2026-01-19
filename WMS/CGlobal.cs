@@ -26,6 +26,7 @@ namespace WMS
     {
         public int Remain;
         public int Total;
+        public bool Request;
     }
     public struct SProdRate
     {

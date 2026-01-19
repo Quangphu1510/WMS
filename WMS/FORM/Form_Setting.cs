@@ -26,5 +26,11 @@ namespace WMS
         {
             chbSimulation.Checked = CGlobal.SimulationMode;
         }
+
+        private void btnDisableAll_Click(object sender, EventArgs e)
+        {
+            string strCMD = "UPDATE MachineMaterial SET Enable = 0";
+            CGlobal.DataBase.ExecuteNonQuery(strCMD);
+        }
     }
 }
